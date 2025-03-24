@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Cita</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+        }
+        .message {
+            margin-top: 20px;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Reserva tu Cita</h2>
+        <label for="fecha">Selecciona una fecha:</label>
+        <input type="date" id="fecha">
+        <label for="hora">Selecciona un horario:</label>
+        <input type="time" id="hora">
+        <button onclick="verificarDisponibilidad()">Reservar</button>
+        <p class="message" id="mensaje"></p>
+    </div>
+
+    <script>
+        function verificarDisponibilidad() {
+            let mensaje = document.getElementById("mensaje");
+            mensaje.textContent = "Lo sentimos, no hay disponibilidad para ese día y hora.";
+        }
+    </script>
+</body>
+</html>
